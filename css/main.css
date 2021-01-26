@@ -1,1 +1,108 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f4edf1), color-stop(#ede7ed), color-stop(#e6e2e9), color-stop(#dedce4), color-stop(#d6d7e0), color-stop(#cfd2db), color-stop(#c7ccd7), color-stop(#bfc7d2), color-stop(#b7c0cc), color-stop(#afb9c5), color-stop(#a6b2bf), to(#9eabb9));
+  background-image: linear-gradient(to bottom, #f4edf1, #ede7ed, #e6e2e9, #dedce4, #d6d7e0, #cfd2db, #c7ccd7, #bfc7d2, #b7c0cc, #afb9c5, #a6b2bf, #9eabb9);
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Dancing Script', cursive;
+}
+
+body .buttons_container {
+  height: 10vh;
+  width: 100vw;
+  background: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+body .buttons_container .add, body .buttons_container .search, body .buttons_container .delete_main {
+  height: 5vh;
+  width: 30vw;
+  background-image: none;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.25rem;
+  -webkit-transition: all 3s easy-in;
+  transition: all 3s easy-in;
+}
+
+body .buttons_container .add:hover, body .buttons_container .search:hover, body .buttons_container .delete_main:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ddf0ec), color-stop(#d3ece7), color-stop(#c9e8e2), color-stop(#bfe4dc), to(#b5e0d7));
+  background-image: linear-gradient(to bottom, #ddf0ec, #d3ece7, #c9e8e2, #bfe4dc, #b5e0d7);
+}
+
+body .heading_container {
+  height: 10vh;
+  width: 100vw;
+  line-height: 10vh;
+  background: none;
+  text-align: center;
+}
+
+body .heading_container h1 {
+  font-size: 2rem;
+}
+
+body .engine {
+  margin: 0px auto;
+  display: block;
+  height: 4vh;
+  width: 80vw;
+  outline: none;
+  font-size: 1.25rem;
+}
+
+body .main_list {
+  margin-top: 10vh;
+}
+
+body .main_list li {
+  list-style: none;
+  text-align: left;
+  display: block;
+  width: 70vw;
+  height: 10vh;
+  margin: 0 auto;
+  position: relative;
+  font-size: 1rem;
+}
+
+body .main_list li .delete_button {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f6bdc4), color-stop(#f3aab1), color-stop(#ef979d), color-stop(#ea8588), to(#e37272));
+  background-image: linear-gradient(to bottom, #f6bdc4, #f3aab1, #ef979d, #ea8588, #e37272);
+  border: none;
+  border-radius: 50%;
+  height: 3vh;
+  width: 7vw;
+  position: absolute;
+  right: 0;
+  outline: none;
+  -webkit-transition: all 5000ms ease-in;
+  transition: all 5000ms ease-in;
+}
+
+body .main_list li .delete_button:hover {
+  background: transparent;
+  color: red;
+}
+/*# sourceMappingURL=main.css.map */

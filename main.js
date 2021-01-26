@@ -1,5 +1,4 @@
 //POBIERANIE I DODAWANIE OBIEKTOW i ELEMENTOW//
-
 const addButton = document.querySelector(".add");
 const searchButton = document.querySelector(".search");
 const deleteMainButton = document.querySelector(".delete_main");
@@ -9,6 +8,8 @@ const mainUl = document.querySelector(".main_list");
 const liElements = document.getElementsByClassName("element");
 const mainTable = [];
 let flag = false;
+let valueForBodyHeight = 100;
+
 //Funkcja(w funkcji w innej funkcji) do wywoływania alertu//
 
 const alertSearch = () => {
@@ -16,7 +17,7 @@ const alertSearch = () => {
 }
 //Funkcja w innej funkcji do ograniczenia liczby znaków i wyświetlenia alertu//
 const secondarySearchAlert = () => {
-    alert('Zawartość znaków ograniczona do 16 znaków')
+    alert('Zawartość znaków ograniczona do 22 znaków')
 }
 //Funkcja w innej fukcji informująca, że nie wyczyszczę zadań, póki choć jedno nie będzie w tablicy//
 const thirdSearchAlert = () => {
@@ -37,6 +38,11 @@ const remove = (e) => {
     mainTable.splice(index,1);
     reset()
     numberOfTasks.textContent = liElements['length'];
+    if (mainTable.length > 5) {
+        valueForBodyHeight -= 10;
+        document.body.style.height = `${valueForBodyHeight}vh`
+        console.log(valueForBodyHeight)
+    }
 }
 //Fukcja zasadniczq dla addButton- dodawanie zadań, stylowanie nowych elementów//
 const addSomeTask = function (e) {
@@ -46,7 +52,7 @@ const addSomeTask = function (e) {
         alertSearch()
         return
     };
-    if (inputValue.length > 15) {
+    if (inputValue.length > 22) {
         console.log(inputValue['length'])
         secondarySearchAlert()
         return
@@ -63,15 +69,13 @@ const addSomeTask = function (e) {
     input.value = '';
     numberOfTasks.textContent = liElements['length'];
     li.querySelector("button").addEventListener('click', remove);
-    li.querySelector("button").style.backgroundColor = "#ccffff";
-    li.querySelector("button").style.color = "#000000 ";
-    li.querySelector("button").style.border = "1px solid #ffccff";
-    li.querySelector("button").style.borderRadius = "50%";
-    li.querySelector("button").style.marginLeft = "5px";
-    li.querySelector("button").style.height = "25px";
-    li.querySelector("button").style.width = "45px"; 
     flag = false; 
     searchButton.textContent = 'Wyszukaj zadanie';
+     //warunek zwiąkszający wysokość body przy dłuższej liście zadań
+    if (mainTable.length > 6){
+        valueForBodyHeight += 10;
+         document.body.style.height = `${valueForBodyHeight}vh`
+    } 
 
 }
 //Funkcja dla searchbutton z wykorzystaniem "flagi"//
@@ -108,7 +112,7 @@ const addTaskByEnter = (e) => {
             alertSearch()
             return
         };
-        if (inputValue.length > 15) {
+        if (inputValue.length > 22) {
             console.log(inputValue['length'])
             secondarySearchAlert()
             return
@@ -124,18 +128,16 @@ const addTaskByEnter = (e) => {
         input.value = '';
         numberOfTasks.textContent = liElements['length'];
         li.querySelector("button").addEventListener('click', remove);
-        li.querySelector("button").style.backgroundColor = "#ccffff";
-        li.querySelector("button").style.color = "#000000 ";
-        li.querySelector("button").style.border = "1px solid #ffccff";
-        li.querySelector("button").style.borderRadius = "50%";
-        li.querySelector("button").style.marginLeft = "5px";
-        li.querySelector("button").style.height = "25px";
-        li.querySelector("button").style.width = "45px"; 
         flag = false; 
         searchButton.textContent = 'Wyszukaj zadanie';
-    } else {
-        return
-    }
+        //warunek zwiąkszający wysokość body przy dłuższej liście zadań
+        if (mainTable.length > 6){
+            valueForBodyHeight += 10;
+            document.body.style.height = `${valueForBodyHeight}vh`
+        } 
+        } else {
+            return
+        }
 }
 const deleteAllTasks = (e) => {
     e.preventDefault();
@@ -151,11 +153,13 @@ const deleteAllTasks = (e) => {
 
     flag = false; 
     searchButton.textContent = 'Wyszukaj zadanie';
+    document.body.style.height = '100vh'
 }
 //Buttons-add Event//
 addButton.addEventListener('click', addSomeTask);
 input.addEventListener('keydown',addTaskByEnter);
 searchButton.addEventListener('click', searchSomeTask);
 deleteMainButton.addEventListener('click', deleteAllTasks);
+
 
 

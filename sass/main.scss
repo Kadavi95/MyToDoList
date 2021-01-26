@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-image: linear-gradient(to bottom, #f4edf1, #ede7ed, #e6e2e9, #dedce4, #d6d7e0, #cfd2db, #c7ccd7, #bfc7d2, #b7c0cc, #afb9c5, #a6b2bf, #9eabb9);
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Dancing Script', cursive;
+    .buttons_container {
+        height: 10vh;
+        width: 100vw;
+        background: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        .add, .search, .delete_main {
+            height: 5vh;
+            width: 30vw;
+            background-image: none;;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            outline: none;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.25rem;
+            transition: all 3s easy-in;
+            &:hover {
+                background-image: linear-gradient(to bottom, #ddf0ec, #d3ece7, #c9e8e2, #bfe4dc, #b5e0d7);
+            }
+        }
+    }
+    .heading_container {
+        height: 10vh;
+        width: 100vw;
+        line-height: 10vh;
+        background: none;
+        text-align: center;
+        h1 {
+            font-size: 2rem;
+            span {
+
+            }
+        }
+    }
+    .engine {
+        margin: 0px auto;
+        display: block;
+        height: 4vh;
+        width: 80vw;
+        outline: none;
+        font-size: 1.25rem;
+    }
+    .main_list {
+        margin-top: 10vh;
+        li {
+            list-style: none;
+            text-align: left;
+            display: block;
+            width: 70vw;
+            height: 10vh;
+            margin: 0 auto;
+            position: relative;
+            font-size: 1rem;
+            .delete_button {
+                background-image: linear-gradient(to bottom, #f6bdc4, #f3aab1, #ef979d, #ea8588, #e37272);
+                border: none;
+                border-radius: 50%;
+                height: 3vh;
+                width: 7vw;
+                position: absolute;
+                right: 0;
+                outline: none;
+                transition: all 5000ms ease-in;
+                &:hover {
+                    background: transparent;
+                    color: red;
+
+                }
+            }
+        }
+    }
+}
