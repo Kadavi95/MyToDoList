@@ -10,26 +10,39 @@ body {
     font-family: 'Dancing Script','Amatic SC', cursive;
     .buttons_container {
         height: 10vh;
-        width: 100vw;
+        width: 98vw;
+        margin: 0 auto;
         background: none;
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-evenly;
-        @media screen {
-            
+        justify-content: space-between;
+        @media screen and (max-width: 814px) {
+            height: 15vh;
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: space-evenly;
         }
+        
         .add, .search, .delete_main {
             height: 5vh;
             width: 30vw;
             background: transparent;
             border: none;
             border-radius: 10px;
+            text-align: center;
             cursor: pointer;
             outline: none;
             font-family: 'Dancing Script', cursive;
-            font-size: 1.25rem;
+            font-size: 1.75rem;
             transition: all .35s ease-in;
+            @media screen and (max-width: 814px) {
+                width: 50vw;
+                height: 3vh;
+                font-size: 1.25rem;
+                
+            }
             &:hover {
                 background-color:#e6ffff; 
             }
@@ -42,9 +55,15 @@ body {
         background: none;
         text-align: center;
         h1 {
-            font-size: 2rem;
-            span {
+            font-size: 2.5rem;
+            @media screen and (max-width: 814px) {
                 font-size: 2rem;
+            }
+            span {
+                font-size: 2.5rem;
+                @media screen and (max-width: 814px) {
+                    font-size: 2rem;
+                }
             }
         }
     }
@@ -52,11 +71,16 @@ body {
         margin: 0px auto;
         display: block;
         height: 4vh;
+   
         width: 80vw;
         outline: none;
-        font-size: 1.25rem;
+        font-size: 1.5rem;
         font-family: 'Amatic SC', cursive;
         letter-spacing: 2px;
+        @media screen and (max-width: 814px) {
+            font-size: 1.5rem;
+        }
+
     }
     .main_list {
         margin-top: 10vh;
@@ -68,18 +92,28 @@ body {
             height: 10vh;
             margin: 0 auto;
             position: relative;
-            font-size: 1rem;
+            font-size: 1.25rem;
             letter-spacing: 1px;
+            @media screen and (max-width: 814px) {
+                font-size: 1rem;
+            }
             .delete_button {
                 background-image: linear-gradient(to bottom, #f6bdc4, #f3aab1, #ef979d, #ea8588, #e37272);
                 border: none;
                 border-radius: 50%;
-                height: 3vh;
-                width: 10vw;
+                height: 5vh;
+                width: 7vw;
                 position: absolute;
                 right: 0;
                 outline: none;
                 transition: all .35s ease-in;
+                font-family: 'Amatic SC', cursive;
+                font-size: 1.25rem;
+                @media screen and (max-width: 814px) {
+                    width: 8vw;
+                    height: 4vh;
+                    font-size: .95rem;
+                }
                 &:hover {
                     background: transparent;
                     color: #ff4d4d;

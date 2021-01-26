@@ -15,7 +15,8 @@ body {
 
 body .buttons_container {
   height: 10vh;
-  width: 100vw;
+  width: 98vw;
+  margin: 0 auto;
   background: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -27,9 +28,28 @@ body .buttons_container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (max-width: 814px) {
+  body .buttons_container {
+    height: 15vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
 }
 
 body .buttons_container .add, body .buttons_container .search, body .buttons_container .delete_main {
@@ -38,12 +58,21 @@ body .buttons_container .add, body .buttons_container .search, body .buttons_con
   background: transparent;
   border: none;
   border-radius: 10px;
+  text-align: center;
   cursor: pointer;
   outline: none;
   font-family: 'Dancing Script', cursive;
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   -webkit-transition: all .35s ease-in;
   transition: all .35s ease-in;
+}
+
+@media screen and (max-width: 814px) {
+  body .buttons_container .add, body .buttons_container .search, body .buttons_container .delete_main {
+    width: 50vw;
+    height: 3vh;
+    font-size: 1.25rem;
+  }
 }
 
 body .buttons_container .add:hover, body .buttons_container .search:hover, body .buttons_container .delete_main:hover {
@@ -59,11 +88,23 @@ body .heading_container {
 }
 
 body .heading_container h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
+}
+
+@media screen and (max-width: 814px) {
+  body .heading_container h1 {
+    font-size: 2rem;
+  }
 }
 
 body .heading_container h1 span {
-  font-size: 2rem;
+  font-size: 2.5rem;
+}
+
+@media screen and (max-width: 814px) {
+  body .heading_container h1 span {
+    font-size: 2rem;
+  }
 }
 
 body .engine {
@@ -72,9 +113,15 @@ body .engine {
   height: 4vh;
   width: 80vw;
   outline: none;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-family: 'Amatic SC', cursive;
   letter-spacing: 2px;
+}
+
+@media screen and (max-width: 814px) {
+  body .engine {
+    font-size: 1.5rem;
+  }
 }
 
 body .main_list {
@@ -89,8 +136,14 @@ body .main_list li {
   height: 10vh;
   margin: 0 auto;
   position: relative;
-  font-size: 1rem;
+  font-size: 1.25rem;
   letter-spacing: 1px;
+}
+
+@media screen and (max-width: 814px) {
+  body .main_list li {
+    font-size: 1rem;
+  }
 }
 
 body .main_list li .delete_button {
@@ -98,13 +151,23 @@ body .main_list li .delete_button {
   background-image: linear-gradient(to bottom, #f6bdc4, #f3aab1, #ef979d, #ea8588, #e37272);
   border: none;
   border-radius: 50%;
-  height: 3vh;
-  width: 10vw;
+  height: 5vh;
+  width: 7vw;
   position: absolute;
   right: 0;
   outline: none;
   -webkit-transition: all .35s ease-in;
   transition: all .35s ease-in;
+  font-family: 'Amatic SC', cursive;
+  font-size: 1.25rem;
+}
+
+@media screen and (max-width: 814px) {
+  body .main_list li .delete_button {
+    width: 8vw;
+    height: 4vh;
+    font-size: .95rem;
+  }
 }
 
 body .main_list li .delete_button:hover {
