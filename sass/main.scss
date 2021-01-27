@@ -43,9 +43,12 @@ body {
                 font-size: 1.25rem;
                 
             }
-            &:hover {
-                background-color:#e6ffff; 
+            @media (orientation: landscape) and (min-width: 815px){
+                &:hover {
+                    background-color:#e6ffff; 
+                }
             }
+          
         }
     }
     .heading_container {

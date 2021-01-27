@@ -75,8 +75,10 @@ body .buttons_container .add, body .buttons_container .search, body .buttons_con
   }
 }
 
-body .buttons_container .add:hover, body .buttons_container .search:hover, body .buttons_container .delete_main:hover {
-  background-color: #e6ffff;
+@media (orientation: landscape) and (min-width: 815px) {
+  body .buttons_container .add:hover, body .buttons_container .search:hover, body .buttons_container .delete_main:hover {
+    background-color: #e6ffff;
+  }
 }
 
 body .heading_container {
