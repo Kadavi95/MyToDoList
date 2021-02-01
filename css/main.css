@@ -13,9 +13,108 @@ body {
   font-family: 'Dancing Script','Amatic SC', cursive;
 }
 
+body .dark_mode-container {
+  height: 10vh;
+  width: 9vw;
+  position: absolute;
+  background-color: red;
+}
+
+body .dark_mode-container .dark_mode-background {
+  width: 5vw;
+  height: 2vh;
+  background-color: #0000ff;
+  margin: 4vh auto;
+  position: relative;
+  cursor: pointer;
+}
+
+body .dark_mode-container .dark_mode-background .dark_mode-circle {
+  position: absolute;
+  left: -.5vw;
+  height: 2vh;
+  width: 2vh;
+  border-radius: 50%;
+  background-color: #000000;
+}
+
+body .dark_mode-container .dark_mode-background .circleToRight {
+  -webkit-animation: move_right .35s linear;
+          animation: move_right .35s linear;
+  background-color: #ffffff;
+  left: 4.5vw;
+}
+
+@-webkit-keyframes move_right {
+  0% {
+    background-color: #000000;
+    left: -.5vw;
+  }
+  50% {
+    background-color: #808080;
+    left: 2vw;
+  }
+  100% {
+    background-color: #ffffff;
+    left: 4.5vw;
+  }
+}
+
+@keyframes move_right {
+  0% {
+    background-color: #000000;
+    left: -.5vw;
+  }
+  50% {
+    background-color: #808080;
+    left: 2vw;
+  }
+  100% {
+    background-color: #ffffff;
+    left: 4.5vw;
+  }
+}
+
+body .dark_mode-container .dark_mode-background .circleToLeft {
+  -webkit-animation: move_left .35s linear;
+          animation: move_left .35s linear;
+  background-color: #000000;
+  left: -.5vw;
+}
+
+@-webkit-keyframes move_left {
+  0% {
+    background-color: #ffffff;
+    left: 4.5vw;
+  }
+  50% {
+    background-color: #808080;
+    left: 2vw;
+  }
+  100% {
+    background-color: #000000;
+    left: -.5vw;
+  }
+}
+
+@keyframes move_left {
+  0% {
+    background-color: #ffffff;
+    left: 4.5vw;
+  }
+  50% {
+    background-color: #808080;
+    left: 2vw;
+  }
+  100% {
+    background-color: #000000;
+    left: -.5vw;
+  }
+}
+
 body .buttons_container {
   height: 10vh;
-  width: 98vw;
+  width: 82vw;
   margin: 0 auto;
   background: none;
   display: -webkit-box;
@@ -46,15 +145,15 @@ body .buttons_container {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
 body .buttons_container .add, body .buttons_container .search, body .buttons_container .delete_main {
   height: 5vh;
-  width: 30vw;
+  width: 25vw;
   background: transparent;
   border: none;
   border-radius: 10px;
@@ -75,7 +174,7 @@ body .buttons_container .add, body .buttons_container .search, body .buttons_con
   }
 }
 
-@media (orientation: landscape) and (min-width: 815px) {
+@media screen and (min-width: 815px) {
   body .buttons_container .add:hover, body .buttons_container .search:hover, body .buttons_container .delete_main:hover {
     background-color: #e6ffff;
   }

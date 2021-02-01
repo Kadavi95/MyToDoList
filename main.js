@@ -7,8 +7,13 @@ const input = document.querySelector(".engine");
 const mainUl = document.querySelector(".main_list");
 const liElements = document.getElementsByClassName("element");
 const mainTable = [];
+const darkModeFakeButton = document.querySelector(".dark_mode-container .dark_mode-background");
+const darkModeFakeCircle = document.querySelector(".dark_mode-container .dark_mode-background .dark_mode-circle");
 let flag = false;
+let secondaryFlag = false;
 let valueForBodyHeight = 100;
+
+
 
 //Funkcja(w funkcji w innej funkcji) do wywoływania alertu//
 
@@ -155,11 +160,29 @@ const deleteAllTasks = (e) => {
     searchButton.textContent = 'Wyszukaj zadanie';
     document.body.style.height = '100vh'
 }
+const changeDayMode = () => {
+    if(secondaryFlag === false) {
+        darkModeFakeCircle.classList.remove('circleToLeft');
+        darkModeFakeCircle.classList.add('circleToRight');
+        secondaryFlag = true;
+        
+        console.log(secondaryFlag,darkModeFakeCircle)
+
+    } else if(secondaryFlag === true) {
+        darkModeFakeCircle.classList.remove('circleToRight');
+        darkModeFakeCircle.classList.add('circleToLeft');
+        secondaryFlag = false
+        console.log(secondaryFlag,darkModeFakeCircle)
+
+    }
+    
+}
 //Buttons-add Event//
 addButton.addEventListener('click', addSomeTask);
 input.addEventListener('keydown',addTaskByEnter);
 searchButton.addEventListener('click', searchSomeTask);
 deleteMainButton.addEventListener('click', deleteAllTasks);
+darkModeFakeButton.addEventListener('click', changeDayMode);
 
 
 
