@@ -26,11 +26,13 @@ body {
            background-image: linear-gradient(to right, #ffffff, #e8e8e8, #d1d1d1, #bababa, #a4a4a4, #8e8e8e, #797979, #646464, #4b4b4b, #333333, #1d1d1d, #000000);
            border-radius: 10%;
            cursor: pointer;
+          
            @media screen and (max-width: 814px) {
                height: 12vh;
                width: 4vw;
                margin: 3vh auto;
                background-image: linear-gradient(to bottom, #ffffff, #e8e8e8, #d1d1d1, #bababa, #a4a4a4, #8e8e8e, #797979, #646464, #4b4b4b, #333333, #1d1d1d, #000000);
+                cursor: default;
                border-radius: 10%;
            }
            .dark_mode-circle {
@@ -167,6 +169,7 @@ body {
                 vertical-align: middle;
                 margin-top: 1vh;
                 margin-bottom: 1vh;
+                cursor: default;
             }
             @media screen and (min-width: 815px){
                 &:hover {

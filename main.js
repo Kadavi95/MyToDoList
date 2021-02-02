@@ -206,8 +206,6 @@ const changeDayMode = () => {
         input.style.color = '#000';
 
         secondaryFlag = false;
-     
-
     }
 }
 //Buttons-add Event//
