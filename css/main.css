@@ -32,6 +32,8 @@ body .dark_mode-container .dark_mode-background {
   height: 2vh;
   margin: 4vh auto;
   position: relative;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(#e8e8e8), color-stop(#d1d1d1), color-stop(#bababa), color-stop(#a4a4a4), color-stop(#8e8e8e), color-stop(#797979), color-stop(#646464), color-stop(#4b4b4b), color-stop(#333333), color-stop(#1d1d1d), to(#000000));
+  background-image: linear-gradient(to bottom, #ffffff, #e8e8e8, #d1d1d1, #bababa, #a4a4a4, #8e8e8e, #797979, #646464, #4b4b4b, #333333, #1d1d1d, #000000);
   cursor: pointer;
 }
 

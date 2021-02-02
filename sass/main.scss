@@ -22,6 +22,7 @@ body {
            height: 2vh;
            margin: 4vh auto;
            position: relative;
+           background-image: linear-gradient(to bottom, #ffffff, #e8e8e8, #d1d1d1, #bababa, #a4a4a4, #8e8e8e, #797979, #646464, #4b4b4b, #333333, #1d1d1d, #000000);;
            cursor: pointer;
            @media screen and (max-width: 814px) {
                height: 12vh;
