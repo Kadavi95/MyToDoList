@@ -2,6 +2,7 @@
 const addButton = document.querySelector(".add");
 const searchButton = document.querySelector(".search");
 const deleteMainButton = document.querySelector(".delete_main");
+const allButtons = [...document.querySelectorAll('.buttonMenu')];
 const numberOfTasks = document.querySelector(".heading_container h1 span");
 const input = document.querySelector(".engine");
 const mainUl = document.querySelector(".main_list");
@@ -10,10 +11,10 @@ const mainTable = [];
 const darkModeFakeButton = document.querySelector(".dark_mode-container .dark_mode-background");
 const darkModeFakeCircle = document.querySelector(".dark_mode-container .dark_mode-background .dark_mode-circle");
 const darkModeSiteBody = document.querySelector('body');
+
 let flag = false;
 let secondaryFlag = false;
 let valueForBodyHeight = 100;
-
 
 
 //Funkcja(w funkcji w innej funkcji) do wywoływania alertu//
@@ -166,6 +167,9 @@ const changeDayMode = () => {
         darkModeFakeCircle.classList.remove('circleToLeft');
         darkModeFakeCircle.classList.add('circleToRight');
         darkModeSiteBody.classList.add('darkModeSite');
+        allButtons.forEach((button) => {
+            button.style.color = "#fff"
+        })
         console.log(darkModeSiteBody)
         secondaryFlag = true;
 
@@ -173,6 +177,9 @@ const changeDayMode = () => {
         darkModeFakeCircle.classList.remove('circleToRight');
         darkModeFakeCircle.classList.add('circleToLeft');
         darkModeSiteBody.classList.remove('darkModeSite');
+        allButtons.forEach((button) => {
+            button.style.color = "#000"
+        })
         console.log(darkModeSiteBody)
         secondaryFlag = false
     }
