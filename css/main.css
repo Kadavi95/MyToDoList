@@ -10,7 +10,7 @@ body {
   background-image: linear-gradient(to bottom, #f4edf1, #ede7ed, #e6e2e9, #dedce4, #d6d7e0, #cfd2db, #c7ccd7, #bfc7d2, #b7c0cc, #afb9c5, #a6b2bf, #9eabb9);
   height: 100vh;
   width: 100vw;
-  font-family: 'Dancing Script','Amatic SC', cursive;
+  font-family: 'Norican','Unna', serif, cursive;
 }
 
 body .dark_mode-container {
@@ -269,7 +269,7 @@ body .buttons_container .add, body .buttons_container .search, body .buttons_con
   text-align: center;
   cursor: pointer;
   outline: none;
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Norican', cursive;
   font-size: 1.75rem;
   -webkit-transition: all .35s ease-in;
   transition: all .35s ease-in;
@@ -330,7 +330,7 @@ body .engine {
   width: 80vw;
   outline: none;
   font-size: 1.5rem;
-  font-family: 'Amatic SC', cursive;
+  font-family: 'Unna', serif;
   letter-spacing: 2px;
   border: 1px solid #000;
   color: #000;
@@ -357,6 +357,7 @@ body .main_list li {
   height: 10vh;
   margin: 0 auto;
   position: relative;
+  font-family: 'Unna', serif;
   font-size: 1.25rem;
   letter-spacing: 1px;
   -webkit-transition: all .35s ease-in;
@@ -382,7 +383,7 @@ body .main_list li .delete_button {
   outline: none;
   -webkit-transition: all .35s ease-in;
   transition: all .35s ease-in;
-  font-family: 'Amatic SC', cursive;
+  font-family: 'Unna', serif;
   font-size: 1.25rem;
 }
 

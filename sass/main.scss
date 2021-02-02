@@ -7,7 +7,8 @@ body {
     background-image: linear-gradient(to bottom, #f4edf1, #ede7ed, #e6e2e9, #dedce4, #d6d7e0, #cfd2db, #c7ccd7, #bfc7d2, #b7c0cc, #afb9c5, #a6b2bf, #9eabb9);
     height: 100vh;
     width: 100vw;
-    font-family: 'Dancing Script','Amatic SC', cursive;
+    font-family:'Norican','Unna', serif, cursive;
+    
     .dark_mode-container {
         height: 10vh;
         width: 9vw;
@@ -155,7 +156,7 @@ body {
             text-align: center;
             cursor: pointer;
             outline: none;
-            font-family: 'Dancing Script', cursive;
+            font-family: 'Norican', cursive;
             font-size: 1.75rem;
             transition: all .35s ease-in;       
             @media screen and (max-width: 814px) {
@@ -202,7 +203,7 @@ body {
         width: 80vw;
         outline: none;
         font-size: 1.5rem;
-        font-family: 'Amatic SC', cursive;
+        font-family: 'Unna', serif;
         letter-spacing: 2px;
         border: 1px solid #000;
         color: #000;
@@ -223,6 +224,7 @@ body {
             height: 10vh;
             margin: 0 auto;
             position: relative;
+            font-family: 'Unna', serif;
             font-size: 1.25rem;
             letter-spacing: 1px;
             transition: all .35s ease-in;
@@ -240,7 +242,7 @@ body {
                 right: 0;
                 outline: none;
                 transition: all .35s ease-in;
-                font-family: 'Amatic SC', cursive;
+                font-family: 'Unna', serif;
                 font-size: 1.25rem;
                 @media screen and (max-width: 814px) {
                     width: 8vw;
