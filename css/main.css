@@ -293,6 +293,8 @@ body .heading_container {
 
 body .heading_container h1 {
   font-size: 2.5rem;
+  -webkit-transition: all .35s ease-in;
+  transition: all .35s ease-in;
 }
 
 @media screen and (max-width: 814px) {
@@ -320,6 +322,11 @@ body .engine {
   font-size: 1.5rem;
   font-family: 'Amatic SC', cursive;
   letter-spacing: 2px;
+  border: 1px solid #000;
+  color: #000;
+  background-color: #808080;
+  -webkit-transition: all .35s ease-in;
+  transition: all .35s ease-in;
 }
 
 @media screen and (max-width: 814px) {
@@ -342,6 +349,9 @@ body .main_list li {
   position: relative;
   font-size: 1.25rem;
   letter-spacing: 1px;
+  -webkit-transition: all .35s ease-in;
+  transition: all .35s ease-in;
+  color: #000000;
 }
 
 @media screen and (max-width: 814px) {
@@ -382,5 +392,9 @@ body .main_list li .delete_button:hover {
 .darkModeSite {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#484848), color-stop(#424242), color-stop(#3b3b3b), color-stop(#353535), color-stop(#2f2f2f), color-stop(#2b2b2b), color-stop(#272727), color-stop(#232323), color-stop(#202020), color-stop(#1d1d1d), color-stop(#1b1b1b), to(#181818));
   background-image: linear-gradient(to bottom, #484848, #424242, #3b3b3b, #353535, #2f2f2f, #2b2b2b, #272727, #232323, #202020, #1d1d1d, #1b1b1b, #181818);
+}
+
+.darkLiMode {
+  color: #ffffff;
 }
 /*# sourceMappingURL=main.css.map */

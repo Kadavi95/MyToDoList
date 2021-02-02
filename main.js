@@ -4,6 +4,7 @@ const searchButton = document.querySelector(".search");
 const deleteMainButton = document.querySelector(".delete_main");
 const allButtons = [...document.querySelectorAll('.buttonMenu')];
 const numberOfTasks = document.querySelector(".heading_container h1 span");
+const numberOfTaskH = document.querySelector(".heading_container h1")
 const input = document.querySelector(".engine");
 const mainUl = document.querySelector(".main_list");
 const liElements = document.getElementsByClassName("element");
@@ -11,11 +12,9 @@ const mainTable = [];
 const darkModeFakeButton = document.querySelector(".dark_mode-container .dark_mode-background");
 const darkModeFakeCircle = document.querySelector(".dark_mode-container .dark_mode-background .dark_mode-circle");
 const darkModeSiteBody = document.querySelector('body');
-
 let flag = false;
 let secondaryFlag = false;
 let valueForBodyHeight = 100;
-
 
 //Funkcja(w funkcji w innej funkcji) do wywoływania alertu//
 
@@ -67,6 +66,11 @@ const addSomeTask = function (e) {
     const li = document.createElement('li');
     li.innerHTML = inputValue + `<button class="delete_button">usuń</button>`;
     li.className = 'element';
+    if (secondaryFlag === false) {
+        li.style.color = '#000'
+    } else if(secondaryFlag === true) {
+        li.style.color = '#fff'
+    } 
     mainTable.push(li);
     mainTable.forEach((item,key) => {
         item.dataset.key = key
@@ -127,11 +131,17 @@ const addTaskByEnter = (e) => {
         const li = document.createElement('li');
         li.innerHTML = inputValue + `<button class="delete_button">usuń</button>`;
         li.className = 'element';
+        if (secondaryFlag === false) {
+            li.style.color = '#000'
+        } else if(secondaryFlag === true) {
+            li.style.color = '#fff'
+        } 
         mainTable.push(li);
         mainTable.forEach((item,key) => {
             item.dataset.key = key
             mainUl.appendChild(item)
         });
+        console.log(mainTable)
         input.value = '';
         numberOfTasks.textContent = liElements['length'];
         li.querySelector("button").addEventListener('click', remove);
@@ -157,22 +167,26 @@ const deleteAllTasks = (e) => {
     mainTable.length = 0;
     mainUl.textContent = '';
     numberOfTasks.textContent = '';
-
     flag = false; 
     searchButton.textContent = 'Wyszukaj zadanie';
     document.body.style.height = '100vh'
 }
 const changeDayMode = () => {
+    const allLi = document.querySelectorAll('ul li');
     if(secondaryFlag === false) {
         darkModeFakeCircle.classList.remove('circleToLeft');
         darkModeFakeCircle.classList.add('circleToRight');
         darkModeSiteBody.classList.add('darkModeSite');
         allButtons.forEach((button) => {
             button.style.color = "#fff"
-        })
-        console.log(darkModeSiteBody)
+        });
+        numberOfTaskH.style.color = '#fff';
+        allLi.forEach(li => li.style.color = '#fff');
+        input.style.backgroundColor = '#737373';
+        input.style.border = '1px solid #fff'
+        input.style.color = '#fff'
+        
         secondaryFlag = true;
-
     } else if(secondaryFlag === true) {
         darkModeFakeCircle.classList.remove('circleToRight');
         darkModeFakeCircle.classList.add('circleToLeft');
@@ -180,10 +194,13 @@ const changeDayMode = () => {
         allButtons.forEach((button) => {
             button.style.color = "#000"
         })
-        console.log(darkModeSiteBody)
-        secondaryFlag = false
+        numberOfTaskH.style.color = "#000";
+        allLi.forEach(li => li.style.color = '#000');
+        secondaryFlag = false;
+        input.style.backgroundColor = '#808080';
+        input.style.border = '1px solid #000'
+        input.style.color = '#000'
     }
-    
 }
 //Buttons-add Event//
 addButton.addEventListener('click', addSomeTask);
