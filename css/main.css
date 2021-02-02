@@ -237,7 +237,8 @@ body .buttons_container {
 
 @media screen and (max-width: 814px) {
   body .buttons_container {
-    height: 15vh;
+    height: 0vh;
+    padding-top: 18vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -271,8 +272,10 @@ body .buttons_container .add, body .buttons_container .search, body .buttons_con
 
 @media screen and (max-width: 814px) {
   body .buttons_container .add, body .buttons_container .search, body .buttons_container .delete_main {
-    width: 50vw;
-    height: 3vh;
+    height: 0vh;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    width: 70vw;
     font-size: 1.25rem;
   }
 }
