@@ -12,22 +12,22 @@ body {
         height: 10vh;
         width: 9vw;
         position: absolute;
-        background-color: red;
+        background-color: transparent;
         @media screen and (max-width: 814px) {
-            height: 20vh;
+            height: 18vh;
             width: 5vh;
         }
         .dark_mode-background {
            width: 5vw;
            height: 2vh;
-           background-color: #0000ff; 
            margin: 4vh auto;
            position: relative;
            cursor: pointer;
            @media screen and (max-width: 814px) {
-               height: 10vh;
+               height: 12vh;
                width: 4vw;
-               margin: 5vh auto;
+               margin: 3vh auto;
+               border-radius: 10%;
            }
            .dark_mode-circle {
                position: absolute;
@@ -35,7 +35,7 @@ body {
                height: 2vh;
                width: 2vh;
                border-radius: 50%;
-               opacity: .5;
+               
                background-color: #000000;
                @media screen and (max-width: 814px) {
                     left: 0vw;
@@ -51,7 +51,7 @@ body {
                 @media screen and (max-width: 814px) {
                     animation: move_down .35s linear;
                     left: 0vw;
-                    top: 8.5vh
+                    top: 10.5vh
                 }
                 @keyframes move_right {
                     0%{
@@ -74,11 +74,11 @@ body {
                         background-color: #000000;
                     }
                     50% {
-                        top: 4vh;
+                        top: 5vh;
                         background-color: #808080;
                     }
                     100%{
-                        top: 8.5vh;
+                        top: 10.5vh;
                         background-color: #ffffff;
                     }
 
@@ -110,11 +110,11 @@ body {
                 @keyframes move_up {
                     0%{
                     background-color: #ffffff;
-                    top: 8.5vh;
+                    top: 10.5vh;
                     }
                    50% {
                      background-color: #808080;
-                     top: 4vh
+                     top: 5vh
                  }
                  100% {
                      background-color: #000000;
