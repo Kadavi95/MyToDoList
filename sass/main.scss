@@ -163,7 +163,6 @@ body {
                     background-color:#e6ffff; 
                 }
             }
-          
         }
     }
     .heading_container {
@@ -240,4 +239,7 @@ body {
             }
         }
     }
+}
+.darkModeSite {
+    background-image: linear-gradient(to bottom, #484848, #424242, #3b3b3b, #353535, #2f2f2f, #2b2b2b, #272727, #232323, #202020, #1d1d1d, #1b1b1b, #181818);
 }

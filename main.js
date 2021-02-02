@@ -9,6 +9,7 @@ const liElements = document.getElementsByClassName("element");
 const mainTable = [];
 const darkModeFakeButton = document.querySelector(".dark_mode-container .dark_mode-background");
 const darkModeFakeCircle = document.querySelector(".dark_mode-container .dark_mode-background .dark_mode-circle");
+const darkModeSiteBody = document.querySelector('body');
 let flag = false;
 let secondaryFlag = false;
 let valueForBodyHeight = 100;
@@ -164,11 +165,15 @@ const changeDayMode = () => {
     if(secondaryFlag === false) {
         darkModeFakeCircle.classList.remove('circleToLeft');
         darkModeFakeCircle.classList.add('circleToRight');
+        darkModeSiteBody.classList.add('darkModeSite');
+        console.log(darkModeSiteBody)
         secondaryFlag = true;
-        
+
     } else if(secondaryFlag === true) {
         darkModeFakeCircle.classList.remove('circleToRight');
         darkModeFakeCircle.classList.add('circleToLeft');
+        darkModeSiteBody.classList.remove('darkModeSite');
+        console.log(darkModeSiteBody)
         secondaryFlag = false
     }
     
