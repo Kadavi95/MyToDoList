@@ -135,8 +135,8 @@ body {
         justify-content: space-between;
         @media screen and (max-width: 814px) {
             height: 0vh;
-            padding-top: 18vh;
-            
+            padding-top: 20vh;
+            padding-bottom: 4vh;
             display: flex;
             flex-direction: column-reverse;
             align-items: center;
@@ -161,6 +161,9 @@ body {
                 padding-bottom: 3vh;
                 width: 70vw;
                 font-size: 1.25rem;
+                line-height: 4vh;
+                margin-top: 1vh;
+                margin-bottom: 1vh;
             }
             @media screen and (min-width: 815px){
                 &:hover {
