@@ -328,8 +328,8 @@ body .heading_container h1 span {
 body .engine {
   margin: 0px auto;
   display: block;
-  padding-top: 1.5vh;
-  padding-bottom: 1.5vh;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
   width: 80vw;
   outline: none;
   font-size: 1.5rem;
