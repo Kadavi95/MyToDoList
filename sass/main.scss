@@ -26,25 +26,26 @@ body {
                height: 2vh;
                width: 2vh;
                border-radius: 50%;
+               opacity: .5;
                background-color: #000000;
            }
            .circleToRight {
                 animation: move_right .35s linear;
                 background-color: #ffffff;
-                left: 4.5vw;
+                left: 4.45vw;
                 @keyframes move_right {
                     0%{
-                         background-color: #000000;
-                         left: -.5vw;
+                    background-color: #000000;
+                    left: -.5vw;
                     }
                    50% {
-                     background-color: #808080;
-                     left: 2vw;
+                    background-color: #808080;
+                    left: 2vw;
                     
                  }
                  100% {
                      background-color: #ffffff;
-                     left: 4.5vw;  
+                     left: 4.45vw;  
                  }
                 }
            }

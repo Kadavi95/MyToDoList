@@ -35,6 +35,7 @@ body .dark_mode-container .dark_mode-background .dark_mode-circle {
   height: 2vh;
   width: 2vh;
   border-radius: 50%;
+  opacity: .5;
   background-color: #000000;
 }
 
@@ -42,7 +43,7 @@ body .dark_mode-container .dark_mode-background .circleToRight {
   -webkit-animation: move_right .35s linear;
           animation: move_right .35s linear;
   background-color: #ffffff;
-  left: 4.5vw;
+  left: 4.45vw;
 }
 
 @-webkit-keyframes move_right {
@@ -56,7 +57,7 @@ body .dark_mode-container .dark_mode-background .circleToRight {
   }
   100% {
     background-color: #ffffff;
-    left: 4.5vw;
+    left: 4.45vw;
   }
 }
 
@@ -71,7 +72,7 @@ body .dark_mode-container .dark_mode-background .circleToRight {
   }
   100% {
     background-color: #ffffff;
-    left: 4.5vw;
+    left: 4.45vw;
   }
 }
 
