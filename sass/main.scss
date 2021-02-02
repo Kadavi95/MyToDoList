@@ -253,3 +253,9 @@ body {
 .darkLiMode {
     color: #ffffff;
 }
+.buttonDarkMode {
+    transition: all .35s ease-in;  
+    &:hover {
+        background-color: #737373 !important;
+    }
+}

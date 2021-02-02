@@ -179,27 +179,35 @@ const changeDayMode = () => {
         darkModeSiteBody.classList.add('darkModeSite');
         allButtons.forEach((button) => {
             button.style.color = "#fff"
+            button.classList.add('buttonDarkMode')
         });
+        console.log(allButtons)
         numberOfTaskH.style.color = '#fff';
         allLi.forEach(li => li.style.color = '#fff');
         input.style.backgroundColor = '#737373';
         input.style.border = '1px solid #fff'
         input.style.color = '#fff'
-        
         secondaryFlag = true;
+
     } else if(secondaryFlag === true) {
         darkModeFakeCircle.classList.remove('circleToRight');
         darkModeFakeCircle.classList.add('circleToLeft');
         darkModeSiteBody.classList.remove('darkModeSite');
         allButtons.forEach((button) => {
             button.style.color = "#000"
+            button.classList.remove('buttonDarkMode')
         })
+        console.log(allButtons)
         numberOfTaskH.style.color = "#000";
         allLi.forEach(li => li.style.color = '#000');
-        secondaryFlag = false;
+    
         input.style.backgroundColor = '#808080';
-        input.style.border = '1px solid #000'
-        input.style.color = '#000'
+        input.style.border = '1px solid #000';
+        input.style.color = '#000';
+
+        secondaryFlag = false;
+     
+
     }
 }
 //Buttons-add Event//
