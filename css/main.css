@@ -20,6 +20,13 @@ body .dark_mode-container {
   background-color: red;
 }
 
+@media screen and (max-width: 814px) {
+  body .dark_mode-container {
+    height: 20vh;
+    width: 5vh;
+  }
+}
+
 body .dark_mode-container .dark_mode-background {
   width: 5vw;
   height: 2vh;
@@ -27,6 +34,14 @@ body .dark_mode-container .dark_mode-background {
   margin: 4vh auto;
   position: relative;
   cursor: pointer;
+}
+
+@media screen and (max-width: 814px) {
+  body .dark_mode-container .dark_mode-background {
+    height: 10vh;
+    width: 4vw;
+    margin: 5vh auto;
+  }
 }
 
 body .dark_mode-container .dark_mode-background .dark_mode-circle {
@@ -39,11 +54,29 @@ body .dark_mode-container .dark_mode-background .dark_mode-circle {
   background-color: #000000;
 }
 
+@media screen and (max-width: 814px) {
+  body .dark_mode-container .dark_mode-background .dark_mode-circle {
+    left: 0vw;
+    height: 4vw;
+    width: 4vw;
+    top: -.5vh;
+  }
+}
+
 body .dark_mode-container .dark_mode-background .circleToRight {
   -webkit-animation: move_right .35s linear;
           animation: move_right .35s linear;
   background-color: #ffffff;
   left: 4.45vw;
+}
+
+@media screen and (max-width: 814px) {
+  body .dark_mode-container .dark_mode-background .circleToRight {
+    -webkit-animation: move_down .35s linear;
+            animation: move_down .35s linear;
+    left: 0vw;
+    top: 8.5vh;
+  }
 }
 
 @-webkit-keyframes move_right {
@@ -76,6 +109,36 @@ body .dark_mode-container .dark_mode-background .circleToRight {
   }
 }
 
+@-webkit-keyframes move_down {
+  0% {
+    top: -.5vh;
+    background-color: #000000;
+  }
+  50% {
+    top: 4vh;
+    background-color: #808080;
+  }
+  100% {
+    top: 8.5vh;
+    background-color: #ffffff;
+  }
+}
+
+@keyframes move_down {
+  0% {
+    top: -.5vh;
+    background-color: #000000;
+  }
+  50% {
+    top: 4vh;
+    background-color: #808080;
+  }
+  100% {
+    top: 8.5vh;
+    background-color: #ffffff;
+  }
+}
+
 body .dark_mode-container .dark_mode-background .circleToLeft {
   -webkit-animation: move_left .35s linear;
           animation: move_left .35s linear;
@@ -83,10 +146,19 @@ body .dark_mode-container .dark_mode-background .circleToLeft {
   left: -.5vw;
 }
 
+@media screen and (max-width: 814px) {
+  body .dark_mode-container .dark_mode-background .circleToLeft {
+    -webkit-animation: move_up .35s linear;
+            animation: move_up .35s linear;
+    left: 0vw;
+    top: -.5vh;
+  }
+}
+
 @-webkit-keyframes move_left {
   0% {
     background-color: #ffffff;
-    left: 4.5vw;
+    left: 4.45vw;
   }
   50% {
     background-color: #808080;
@@ -101,7 +173,7 @@ body .dark_mode-container .dark_mode-background .circleToLeft {
 @keyframes move_left {
   0% {
     background-color: #ffffff;
-    left: 4.5vw;
+    left: 4.45vw;
   }
   50% {
     background-color: #808080;
@@ -110,6 +182,36 @@ body .dark_mode-container .dark_mode-background .circleToLeft {
   100% {
     background-color: #000000;
     left: -.5vw;
+  }
+}
+
+@-webkit-keyframes move_up {
+  0% {
+    background-color: #ffffff;
+    top: 8.5vh;
+  }
+  50% {
+    background-color: #808080;
+    top: 4vh;
+  }
+  100% {
+    background-color: #000000;
+    top: -.5vh;
+  }
+}
+
+@keyframes move_up {
+  0% {
+    background-color: #ffffff;
+    top: 8.5vh;
+  }
+  50% {
+    background-color: #808080;
+    top: 4vh;
+  }
+  100% {
+    background-color: #000000;
+    top: -.5vh;
   }
 }
 

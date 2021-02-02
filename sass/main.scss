@@ -13,6 +13,10 @@ body {
         width: 9vw;
         position: absolute;
         background-color: red;
+        @media screen and (max-width: 814px) {
+            height: 20vh;
+            width: 5vh;
+        }
         .dark_mode-background {
            width: 5vw;
            height: 2vh;
@@ -20,6 +24,11 @@ body {
            margin: 4vh auto;
            position: relative;
            cursor: pointer;
+           @media screen and (max-width: 814px) {
+               height: 10vh;
+               width: 4vw;
+               margin: 5vh auto;
+           }
            .dark_mode-circle {
                position: absolute;
                left: -.5vw;
@@ -28,11 +37,22 @@ body {
                border-radius: 50%;
                opacity: .5;
                background-color: #000000;
+               @media screen and (max-width: 814px) {
+                    left: 0vw;
+                    height: 4vw;
+                    width: 4vw;
+                    top: -.5vh;                   
+               }
            }
            .circleToRight {
                 animation: move_right .35s linear;
                 background-color: #ffffff;
                 left: 4.45vw;
+                @media screen and (max-width: 814px) {
+                    animation: move_down .35s linear;
+                    left: 0vw;
+                    top: 8.5vh
+                }
                 @keyframes move_right {
                     0%{
                     background-color: #000000;
@@ -48,32 +68,60 @@ body {
                      left: 4.45vw;  
                  }
                 }
+                @keyframes move_down {
+                    0% {
+                        top: -.5vh;
+                        background-color: #000000;
+                    }
+                    50% {
+                        top: 4vh;
+                        background-color: #808080;
+                    }
+                    100%{
+                        top: 8.5vh;
+                        background-color: #ffffff;
+                    }
+
+                }
            }
            .circleToLeft {
-                
                 animation: move_left .35s linear;
                 background-color: #000000;
                 left: -.5vw;
+                @media screen and (max-width: 814px) {
+                    animation: move_up .35s linear;
+                    left: 0vw;
+                    top: -.5vh;
+                }
                 @keyframes move_left {
                     0%{
                         background-color: #ffffff;
-                         left: 4.5vw
+                         left: 4.45vw
                     }
                    50% {
                      background-color: #808080;
                      left: 2vw;
-                    
                  }
                  100% {
                      background-color: #000000;
-                     left: -.5vw;
-                   
+                     left: -.5vw;   
                  }
                 }
-
+                @keyframes move_up {
+                    0%{
+                    background-color: #ffffff;
+                    top: 8.5vh;
+                    }
+                   50% {
+                     background-color: #808080;
+                     top: 4vh
+                 }
+                 100% {
+                     background-color: #000000;
+                     top: -.5vh;
+                 }
+                }
            }
-       
-
         }
     }
     .buttons_container {

@@ -166,14 +166,10 @@ const changeDayMode = () => {
         darkModeFakeCircle.classList.add('circleToRight');
         secondaryFlag = true;
         
-        console.log(secondaryFlag,darkModeFakeCircle)
-
     } else if(secondaryFlag === true) {
         darkModeFakeCircle.classList.remove('circleToRight');
         darkModeFakeCircle.classList.add('circleToLeft');
         secondaryFlag = false
-        console.log(secondaryFlag,darkModeFakeCircle)
-
     }
     
 }
