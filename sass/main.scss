@@ -135,8 +135,8 @@ body {
         justify-content: space-between;
         @media screen and (max-width: 814px) {
             height: 0vh;
-            padding-top: 20vh;
-            padding-bottom: 4vh;
+            padding-top: 18vh;
+            padding-bottom: 6vh;
             display: flex;
             flex-direction: column-reverse;
             align-items: center;
@@ -157,11 +157,10 @@ body {
             transition: all .35s ease-in;       
             @media screen and (max-width: 814px) {
                 height: 0vh;
-                padding-top: 3vh;
-                padding-bottom: 3vh;
+                padding-bottom: 4vh;
                 width: 70vw;
                 font-size: 1.25rem;
-                line-height: 4vh;
+                vertical-align: middle;
                 margin-top: 1vh;
                 margin-bottom: 1vh;
             }
