@@ -417,7 +417,9 @@ body .main_list li .delete_button:hover {
   transition: all .35s ease-in;
 }
 
-.buttonDarkMode:hover {
-  background-color: #737373 !important;
+@media screen and (min-width: 815px) {
+  .buttonDarkMode:hover {
+    background-color: #737373 !important;
+  }
 }
 /*# sourceMappingURL=main.css.map */

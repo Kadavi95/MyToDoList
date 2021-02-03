@@ -269,8 +269,10 @@ body {
     color: #ffffff;
 }
 .buttonDarkMode {
-    transition: all .35s ease-in;  
+    transition: all .35s ease-in;
+    @media screen and (min-width: 815px) {
     &:hover {
         background-color: #737373 !important;
+    }
     }
 }
