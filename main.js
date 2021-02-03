@@ -83,9 +83,11 @@ const addSomeTask = function (e) {
     flag = false; 
     searchButton.textContent = 'Wyszukaj zadanie';
      //warunek zwiąkszający wysokość body przy dłuższej liście zadań
-    if (mainTable.length > 6){
+    if (mainTable.length > 6 ){
         valueForBodyHeight += 10;
          document.body.style.height = `${valueForBodyHeight}vh`
+         
+         
     } 
 
 }
@@ -148,10 +150,12 @@ const addTaskByEnter = (e) => {
         flag = false; 
         searchButton.textContent = 'Wyszukaj zadanie';
         //warunek zwiąkszający wysokość body przy dłuższej liście zadań
-        if (mainTable.length > 6){
+        if (mainTable.length > 6  ||  window.innerWidth < 415 && mainTable.length > 4 ){
             valueForBodyHeight += 10;
             document.body.style.height = `${valueForBodyHeight}vh`
+
         } 
+        console.log(window.innerWidth, window.innerHeight,valueForBodyHeight)
         } else {
             return
         }
