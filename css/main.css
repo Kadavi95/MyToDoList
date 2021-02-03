@@ -392,9 +392,9 @@ body .main_list li .delete_button {
 
 @media screen and (max-width: 814px) {
   body .main_list li .delete_button {
-    height: 35%;
+    height: 30%;
     width: 10vw;
-    font-size: .85rem;
+    font-size: .7rem;
   }
 }
 
