@@ -225,7 +225,8 @@ body {
             text-align: left;
             display: block;
             width: 70vw;
-            height: 10vh;
+            padding-top: 5vh;
+            padding-bottom: 5vh;
             margin: 0 auto;
             position: relative;
             font-family: 'Unna', serif;
@@ -244,14 +245,19 @@ body {
                 width: 7vw;
                 position: absolute;
                 right: 0;
+                top: 0;
                 outline: none;
                 transition: all .35s ease-in;
                 font-family: 'Unna', serif;
                 font-size: 1.25rem;
                 @media screen and (max-width: 814px) {
-                    width: 8vw;
                     height: 4vh;
-                    font-size: .95rem;
+                    width: 4vh;
+                    margin-top: 4vh;
+                    border-radius: 50%;
+                   
+                   
+                    font-size: .85rem;
                 }
                 &:hover {
                     background: transparent;

@@ -357,7 +357,8 @@ body .main_list li {
   text-align: left;
   display: block;
   width: 70vw;
-  height: 10vh;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
   margin: 0 auto;
   position: relative;
   font-family: 'Unna', serif;
@@ -383,6 +384,7 @@ body .main_list li .delete_button {
   width: 7vw;
   position: absolute;
   right: 0;
+  top: 0;
   outline: none;
   -webkit-transition: all .35s ease-in;
   transition: all .35s ease-in;
@@ -392,9 +394,11 @@ body .main_list li .delete_button {
 
 @media screen and (max-width: 814px) {
   body .main_list li .delete_button {
-    width: 8vw;
     height: 4vh;
-    font-size: .95rem;
+    width: 4vh;
+    margin-top: 4vh;
+    border-radius: 50%;
+    font-size: .85rem;
   }
 }
 
