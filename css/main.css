@@ -357,8 +357,7 @@ body .main_list li {
   text-align: left;
   display: block;
   width: 70vw;
-  padding-bottom: 10vh;
-  line-height: 5vh;
+  height: 10vh;
   margin: 0 auto;
   position: relative;
   font-family: 'Unna', serif;
@@ -393,8 +392,6 @@ body .main_list li .delete_button {
 
 @media screen and (max-width: 814px) {
   body .main_list li .delete_button {
-    height: 5vh;
-    width: 7vh;
     font-size: .85rem;
   }
 }

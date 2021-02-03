@@ -225,8 +225,7 @@ body {
             text-align: left;
             display: block;
             width: 70vw;
-            padding-bottom: 10vh;
-            line-height: 5vh;
+            height: 10vh;
             margin: 0 auto;
             position: relative;
             font-family: 'Unna', serif;
@@ -250,8 +249,7 @@ body {
                 font-family: 'Unna', serif;
                 font-size: 1.25rem;
                 @media screen and (max-width: 814px) {
-                    height: 5vh;
-                    width: 7vh;
+                    
                     font-size: .85rem;
                 }
                 &:hover {
