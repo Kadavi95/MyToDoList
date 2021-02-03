@@ -150,7 +150,7 @@ const addTaskByEnter = (e) => {
         flag = false; 
         searchButton.textContent = 'Wyszukaj zadanie';
         //warunek zwiąkszający wysokość body przy dłuższej liście zadań
-        if (mainTable.length > 4  ||  window.innerWidth < 415 && mainTable.length > 3 ){
+        if (mainTable.length > 4  ||  window.innerWidth < 415 && mainTable.length > 2 ){
             valueForBodyHeight += 10;
             document.body.style.height = `${valueForBodyHeight}vh`
 
