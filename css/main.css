@@ -271,7 +271,7 @@ body .buttons_container .add, body .buttons_container .search, body .buttons_con
   cursor: pointer;
   outline: none;
   font-family: 'Norican', cursive;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   -webkit-transition: all .35s ease-in;
   transition: all .35s ease-in;
 }
