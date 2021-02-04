@@ -352,6 +352,13 @@ body .main_list {
   margin-top: 10vh;
 }
 
+@media screen and (max-width: 814px) {
+  body .main_list {
+    height: 60vh;
+    overflow: scroll;
+  }
+}
+
 body .main_list li {
   list-style: none;
   text-align: left;
