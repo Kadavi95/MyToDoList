@@ -157,8 +157,9 @@ const addTaskByEnter = (e) => {
         //     document.body.style.height = `${valueForBodyHeight}vh`
 
         // } 
-        if (mainTable.length > 4) {
-            mainUl.style.overFlow = 'scroll'
+        if (mainTable.length > 4 && mainTable.length < 6 || window.innerWidth < 415 && mainTable.length > 3  && mainTable.length < 5 ) {
+            volueForBodyHeight += 10;
+            document.body.style.height = `${valueForBodyHeight}vh`
         };
         console.log(window.innerWidth, window.innerHeight,valueForBodyHeight)
         } else {
