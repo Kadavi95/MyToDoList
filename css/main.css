@@ -356,7 +356,7 @@ body .main_list {
 
 @media screen and (max-width: 814px) {
   body .main_list {
-    height: 60vh;
+    height: 50vh;
     overflow: scroll;
   }
 }
