@@ -350,6 +350,8 @@ body .engine {
 
 body .main_list {
   margin-top: 10vh;
+  height: 60vh;
+  overflow: scroll;
 }
 
 @media screen and (max-width: 814px) {

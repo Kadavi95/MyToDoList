@@ -83,12 +83,13 @@ const addSomeTask = function (e) {
     flag = false; 
     searchButton.textContent = 'Wyszukaj zadanie';
      //warunek zwiąkszający wysokość body przy dłuższej liście zadań
-    if (mainTable.length > 6 ){
-        valueForBodyHeight += 10;
-         document.body.style.height = `${valueForBodyHeight}vh`
+     //na próbę usuwam//
+    // if (mainTable.length > 6 ){
+    //     valueForBodyHeight += 10;
+    //      document.body.style.height = `${valueForBodyHeight}vh`
          
          
-    } 
+    // } 
 
 }
 //Funkcja dla searchbutton z wykorzystaniem "flagi"//
@@ -149,12 +150,13 @@ const addTaskByEnter = (e) => {
         li.querySelector("button").addEventListener('click', remove);
         flag = false; 
         searchButton.textContent = 'Wyszukaj zadanie';
-        //warunek zwiąkszający wysokość body przy dłuższej liście zadań
-        if (mainTable.length > 4  ||  window.innerWidth < 415 && mainTable.length > 3 ){
-            valueForBodyHeight += 10;
-            document.body.style.height = `${valueForBodyHeight}vh`
+        //warunek zwiąkszający wysokość body przy dłuższej liście zadań//
+        //na próbę usuwam//
+        // if (mainTable.length > 4  ||  window.innerWidth < 415 && mainTable.length > 3 ){
+        //     valueForBodyHeight += 10;
+        //     document.body.style.height = `${valueForBodyHeight}vh`
 
-        } 
+        // } 
         console.log(window.innerWidth, window.innerHeight,valueForBodyHeight)
         } else {
             return
