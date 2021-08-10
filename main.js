@@ -44,11 +44,12 @@ const remove = (e) => {
     mainTable.splice(index,1);
     reset()
     numberOfTasks.textContent = liElements['length'];
-    if (mainTable.length > 5) {
-        valueForBodyHeight -= 10;
-        document.body.style.height = `${valueForBodyHeight}vh`
-        console.log(valueForBodyHeight)
-    }
+    //usunięte do zmiany koncepcji na overFlowScroll//
+    // if (mainTable.length > 5) {
+    //     valueForBodyHeight -= 10;
+    //     document.body.style.height = `${valueForBodyHeight}vh`
+    //     console.log(valueForBodyHeight)
+    // }
 }
 //Fukcja zasadniczq dla addButton- dodawanie zadań, stylowanie nowych elementów//
 const addSomeTask = function (e) {
@@ -59,7 +60,7 @@ const addSomeTask = function (e) {
         return
     };
     if (inputValue.length > 22) {
-        console.log(inputValue['length'])
+        console.log(inputValue['length']);
         secondarySearchAlert()
         return
     }
@@ -90,7 +91,10 @@ const addSomeTask = function (e) {
          
          
     // } 
-
+    if (mainTable.length > 4 && mainTable.length < 6 || window.innerWidth < 415 && mainTable.length > 3  && mainTable.length < 4 ) {
+        valueForBodyHeight += 10;
+        document.body.style.height = `${valueForBodyHeight}vh`
+    };
 }
 //Funkcja dla searchbutton z wykorzystaniem "flagi"//
 const searchSomeTask = (e) => {
@@ -105,9 +109,9 @@ const searchSomeTask = (e) => {
         searchButton.textContent = 'Resetuj wyszukiwanie';
         input.value = '';
         let searchMainTable = [...liElements];
-        searchMainTable = searchMainTable.filter((li) => li.textContent.toLowerCase().includes(inputValue))
-        mainUl.textContent = ''
-        searchMainTable.forEach(item => mainUl.appendChild(item))
+        searchMainTable = searchMainTable.filter((li) => li.textContent.toLowerCase().includes(inputValue));
+        mainUl.textContent = '';
+        searchMainTable.forEach(item => mainUl.appendChild(item));
         numberOfTasks.textContent = liElements['length']
     } else if ( flag === true) {
         flag = false; 
