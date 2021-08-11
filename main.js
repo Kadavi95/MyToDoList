@@ -165,7 +165,7 @@ const addTaskByEnter = (e) => {
             valueForBodyHeight += 10;
             document.body.style.height = `${valueForBodyHeight}vh`
         };
-        console.log(window.innerWidth, window.innerHeight,valueForBodyHeight)
+        
         } else {
             return
         }
