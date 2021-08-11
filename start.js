@@ -15,13 +15,17 @@ class toDoList {
         const li = document.createElement("li");
         li.innerHTML = this.input.value + `<button class="delete_button">usuń</button>`;
         li.className = "element";
+        if (this.input.value == ""){
+            this.alert.showPrimaryAlert();
+            return
+        }
         this.mainTable.pushPrimaryArray(li);
         this.mainTable.primaryArray.forEach((item,key) => {
             item.dataset.key = key;
             this.mainUl.appendChild(item);
         });
         this.input.value = "";
-
+    
         
         
         
